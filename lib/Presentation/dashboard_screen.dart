@@ -8,6 +8,7 @@ class DashboardScreen extends StatefulWidget {
   @override
   _DashboardScreenState createState() => _DashboardScreenState();
 }
+
 class _DashboardScreenState extends State<DashboardScreen> {
   final locationDataController = Get.put(LocationDataController());
   @override
@@ -15,6 +16,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
     locationDataController.getTotalDistance();
     super.initState();
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -64,7 +66,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                     () => contaner(
                         iconData: Icons.social_distance,
                         title:
-                            "Total Distance : ${locationDataController.totalDistance.value}",
+                            "Total Distance : ${locationDataController.totalDistance.value.toStringAsFixed(1)}",
                         color: Colors.amber),
                   ),
                   const SizedBox(width: 10),

@@ -17,7 +17,8 @@ class EmployeeDataSource extends DataGridSource {
               DataGridCell<String>(
                   columnName: 'accuracy', value: e['accuracy']),
               DataGridCell<String>(
-                  columnName: 'distance', value: e['distance'].toString()),
+                  columnName: 'distance',
+                  value: e['distance'].toStringAsFixed(1)),
             ]))
         .toList();
   }

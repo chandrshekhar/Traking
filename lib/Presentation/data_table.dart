@@ -91,19 +91,7 @@ class _MyDataTableState extends State<MyDataTable> {
                         // showIOS_DatePicker(context);
                         TimeRange result = await showTimeRangePicker(
                           context: context,
-                        
                         );
-                        // String startTimeH =
-                        //     result.startTime.hour.toString().padLeft(2, '0');
-                        // String endTimeH =
-                        //     result.endTime.hour.toString().padLeft(2, '0');
-                        // String startTimeM =
-                        //     result.startTime.minute.toString().padRight(2, '0');
-                        // String endTimeM =
-                        //     result.endTime.minute.toString().padRight(2, '0');
-                        // print(
-                        //     "result  + ${result.endTime.minute.toString().padLeft(2, '0')}");
-
                         await locationDataController.filterData(
                             stratTime:
                                 "${result.startTime.hour.toString().padLeft(2, '0')}:${result.startTime.minute.toString().padRight(2, '0')}",
