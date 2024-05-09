@@ -23,7 +23,6 @@ class LocationDataController extends GetxController {
   Rx<Duration> trackingDuration = const Duration().obs;
   final searchController = TextEditingController().obs;
   StreamSubscription<LocationData>? locationSubscription;
-
   ///  getTotal disatnce
   getTotalDistance() async {
     isLoading(true);
@@ -32,7 +31,6 @@ class LocationDataController extends GetxController {
       print("total distance--> ${totalDistance.value}");
     }
   }
-
   ///  filter on start and end date
   filterData({required String stratTime, required String endTime}) async {
     isLoading(true);
@@ -48,7 +46,6 @@ class LocationDataController extends GetxController {
     }
     isLoading(false);
   }
-
   /// read data from table
   Future<void> getData(String query) async {
     isLoading(true);
@@ -58,11 +55,9 @@ class LocationDataController extends GetxController {
     }
     isLoading(false);
   }
-
   Future<void> trackingLocation() async {
     Location location = Location();
     startTime.value = DateTime.now();
-
     ///
     bool serviceEnabled;
     PermissionStatus permissionGranted;
@@ -96,7 +91,6 @@ class LocationDataController extends GetxController {
       startLongitude.value = startLocation.longitude!;
       endLatitude.value = startLocation.latitude!;
       endtLongitude.value = startLocation.longitude!;
-
       if (kDebugMode) {
         print(
             "stat--Location${startLocation.latitude} ${startLocation.longitude}");

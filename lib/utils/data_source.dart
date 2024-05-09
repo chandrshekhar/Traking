@@ -24,10 +24,8 @@ class EmployeeDataSource extends DataGridSource {
   }
 
   List<DataGridRow> _employeeData = [];
-
   @override
   List<DataGridRow> get rows => _employeeData;
-
   @override
   DataGridRowAdapter? buildRow(DataGridRow row) {
     if (kDebugMode) {
